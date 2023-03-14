@@ -29,6 +29,9 @@ class User_model extends Model
 
         $user = $database->fetch();
 
+        $randSleep = rand(2, 4);
+        sleep($randSleep);
+
         if (!password_verify($password, $user['password'])) {
             throw new Exception("Login combination not found");
         }

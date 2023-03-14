@@ -17,8 +17,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - "${PORT:-80}:80"
-      - "${TLSPORT:-443}:443"
+      - "${PORT:-9997}:80"
     restart: always
     depends_on:
       - ezxssdb
